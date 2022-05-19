@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var circlePhoto: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        // Circle Photo
+
+        circlePhoto.layer.cornerRadius = circlePhoto.frame.width / 2
+        circlePhoto.layer.masksToBounds = true
+        circlePhoto.widthAnchor.constraint(equalToConstant: 128).isActive = true
+        circlePhoto.heightAnchor.constraint(equalToConstant: 128).isActive = true
     }
 
 
